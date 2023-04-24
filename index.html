@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather in Damascus</title>
+  </head>
+  <body class="blurred">
+    <div class="container">
+      <h1 class="location">Damascus</h1>
+      <p class="date" data-crnt-date>Monday 29 Agust</p>
+    </div>
+    <div class="crnt-all container">
+      <div class="crnt-temp">
+        <img class="crnt-icon" data-crnt-icon src="icons/13d.svg" alt="" />
+        <div>
+          <span class="crnt-deg" data-crnt-temp>21</span><span class="crnt-deg">&deg;</span>
+          <p data-crnt-temp-desc>scattered clouds</p>
+        </div>
+      </div>
+      <div class="current-stats">
+        <div class="row">
+          <div class="crnt-high">
+            <span class="current-text" data-crnt-high>23</span><span class="high-deg current-text">&deg;</span><br />
+            <span class="desc">High</span>
+          </div>
+          <div class="wind">
+            <span class="current-text" data-crnt-wind>7</span><span class="current-text">mph</span><br />
+            <span class="desc">Wind</span>
+          </div>
+          <div class="sunrise">
+            <span class="current-text" data-crnt-sunrise>05:27</span><br />
+            <span class="desc">sunrise</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="crnt-low">
+            <span class="current-text" data-crnt-low>10</span><span class="current-text">&deg;</span><br />
+            <span class="desc">Low</span>
+          </div>
+          <div class="pop">
+            <span class="current-text" data-crnt-pop>23</span><br />
+            <span class="desc">pop</span>
+          </div>
+          <div class="sunset">
+            <span class="sunset-time current-text" data-crnt-sunset>20:57</span><br />
+            <span class="desc sunset-desc">sunset</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper my-swiper container">
+      <span>Next 24 Hours</span>
+      <div class="swiper-wrapper" data-hourly-section>
+        <div class="swiper-slide">
+          <span>3am</span>
+          <img src="icons/01d.svg" alt="" />
+          <span>14&deg;</span>
+        </div>
+        <div class="swiper-slide">
+          <span>3am</span>
+          <img src="icons/02n.svg" alt="" />
+          <span>14&deg;</span>
+        </div>
+        <div class="swiper-slide">
+          <span>3am</span>
+          <img src="icons/02n.svg" alt="" />
+          <span>14&deg;</span>
+        </div>
+        <div class="swiper-slide">
+          <span>3am</span>
+          <img src="icons/02n.svg" alt="" />
+          <span>14&deg;</span>
+        </div>
+        <div class="swiper-slide">
+          <span>3am</span>
+          <img src="icons/02n.svg" alt="" />
+          <span>14&deg;</span>
+        </div>
+      </div>
+    </div>
+    <div class="container top-space">
+      <span>next 6 days</span>
+      <div class="next-6-d" data-next-days>
+        <div class="row">
+          <div class="day">
+            <span class="current-text">Tue</span>
+            <span class="desc hide">30/7</span>
+          </div>
+          <div class="icon">
+            <img src="icons/03d.svg" alt="" />
+          </div>
+          <div class="low">
+            <span class="current-text">10&deg;</span>
+            <span class="desc hide">Low</span>
+          </div>
+          <div class="high">
+            <span class="current-text">21&deg;</span>
+            <span class="desc hide">High</span>
+          </div>
+          <div class="wind">
+            <span class="current-text">12mph</span>
+            <span class="desc hide">Wind</span>
+          </div>
+          <div class="pop">
+            <span class="current-text">13</span>
+            <span class="desc">pop</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="day">
+            <span class="current-text">Tue</span>
+            <span class="desc hide">30/7</span>
+          </div>
+          <div class="icon">
+            <img src="icons/03d.svg" alt="" />
+          </div>
+          <div class="low">
+            <span class="current-text">10&deg;</span>
+            <span class="desc hide">Low</span>
+          </div>
+          <div class="high">
+            <span class="current-text">21&deg;</span>
+            <span class="desc hide">High</span>
+          </div>
+          <div class="wind hide">
+            <span class="current-text">12mph</span>
+            <span class="desc">Wind</span>
+          </div>
+          <div class="pop hide">
+            <span class="current-text">13</span>
+            <span class="desc">pop</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="day">
+            <span class="current-text">Tue</span>
+            <span class="desc hide">30/7</span>
+          </div>
+          <div class="icon">
+            <img src="icons/03d.svg" alt="" />
+          </div>
+          <div class="low">
+            <span class="current-text">10&deg;</span>
+            <span class="desc hide">Low</span>
+          </div>
+          <div class="high">
+            <span class="current-text">21&deg;</span>
+            <span class="desc hide">High</span>
+          </div>
+          <div class="wind">
+            <span class="current-text">12mph</span>
+            <span class="desc">Wind</span>
+          </div>
+          <div class="pop">
+            <span class="current-text">13</span>
+            <span class="desc">pop</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="day">
+            <span class="current-text">Tue</span>
+            <span class="desc hide">30/7</span>
+          </div>
+          <div class="icon">
+            <img src="icons/03d.svg" alt="" />
+          </div>
+          <div class="low">
+            <span class="current-text">10&deg;</span>
+            <span class="desc hide">Low</span>
+          </div>
+          <div class="high">
+            <span class="current-text">21&deg;</span>
+            <span class="desc hide">High</span>
+          </div>
+          <div class="wind">
+            <span class="current-text">12mph</span>
+            <span class="desc">Wind</span>
+          </div>
+          <div class="pop">
+            <span class="current-text">13</span>
+            <span class="desc">pop</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="day">
+            <span class="current-text">Tue</span>
+            <span class="desc hide">30/7</span>
+          </div>
+          <div class="icon">
+            <img src="icons/03d.svg" alt="" />
+          </div>
+          <div class="low">
+            <span class="current-text">10&deg;</span>
+            <span class="desc hide">Low</span>
+          </div>
+          <div class="high">
+            <span class="current-text">21&deg;</span>
+            <span class="desc hide">High</span>
+          </div>
+          <div class="wind">
+            <span class="current-text">12mph</span>
+            <span class="desc">Wind</span>
+          </div>
+          <div class="pop">
+            <span class="current-text">13</span>
+            <span class="desc">pop</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="day">
+            <span class="current-text">Tue</span>
+            <span class="desc hide">30/7</span>
+          </div>
+          <div class="icon">
+            <img src="icons/03d.svg" alt="" />
+          </div>
+          <div class="low">
+            <span class="current-text">10&deg;</span>
+            <span class="desc hide">Low</span>
+          </div>
+          <div class="high">
+            <span class="current-text">21&deg;</span>
+            <span class="desc hide">High</span>
+          </div>
+          <div class="wind">
+            <span class="current-text">12mph</span>
+            <span class="desc">Wind</span>
+          </div>
+          <div class="pop">
+            <span class="current-text">13</span>
+            <span class="desc">pop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <template data-hour-card>
+      <div class="swiper-slide">
+        <span data-hour></span>
+        <img data-icon alt="" />
+         <div class="hour-card-deg">
+           <span data-temp></span><span>&deg;</span>
+         </div>
+      </div>
+    </template>
+    <template data-day-card>
+      <div class="row">
+        <div class="day">
+          <span data-day class="current-text"></span>
+          <span data-date class="desc hide"></span>
+        </div>
+        <div class="icon">
+          <img data-icon alt="" />
+        </div>
+        <div class="low hide">
+          <div class="day-deg">
+            <span class="current-text" data-low></span><span class="current-text">&deg;</span>
+          </div>
+          <span class="desc hide">Low</span>
+        </div>
+        <div class="high hide">
+          <div class="day-deg">
+            <span class="current-text" data-high></span><span class="current-text">&deg;</span>
+          </div>
+          <span class="desc hide">High</span>
+        </div>
+        <div class="high-low">
+          <div class="low">
+            <div class="day-deg">
+              <span class="current-text" data-low-small></span><span class="current-text">&deg;</span>
+            </div>
+            <span class="desc hide">Low</span>
+          </div>
+          <div class="high">
+            <div class="day-deg">
+              <span class="current-text" data-high-small></span><span class="current-text">&deg;</span>
+            </div>
+            <span class="desc hide">High</span>
+          </div>
+        </div>
+        <div class="wind hide">
+          <div>
+            <span class="current-text" data-wind></span><span class="current-text">mph</span>
+          </div>
+          <span class="desc hide">Wind</span>
+        </div>
+        <div class="pop hide">
+          <span class="current-text" data-pop>13</span>
+          <span class="desc">pop</span>
+        </div>
+      </div>
+    </template>
+    <script type="module" src="slider.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: #e6ca14; */
+}
+
+body {
+    color: white;
+    background: linear-gradient(#2936b3, #1487cb);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+.blurred {
+    filter: blur(5px);
+    overflow: hidden;
+}
+
+span {
+    font-size: 22px;
+}
+
+.container {
+    width: 70%;
+    max-width: 1700px;
+    margin: 0 auto;
+
+}
+
+.crnt-all {
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+    position: relative;
+}
+
+.crnt-all::before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 15px);
+    top: 0;
+    width: 1px;
+    background-color: white;
+    height: 100%;
+}
+
+.crnt-temp {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crnt-icon {
+    width: 40%;
+    max-width: 210px;
+    margin-left: 40px;
+}
+
+.crnt-temp > div {
+    line-height: 0.9;
+    margin-right: 30px;
+}
+
+.crnt-deg {
+    font-size: 130px;
+}
+
+.current-stats {
+    flex: 1;
+    margin-left: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current-stats .row:nth-last-child(1) {
+    margin-top: 35px;
+}
+
+.desc {
+    font-size: 12px;
+}
+
+.my-swiper {
+    margin-top: 70px;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: #1d46a0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.swiper-slide img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.hour-card-deg,
+.day-card-deg
+ {
+    display: flex;
+}
+ 
+.icon {
+    width: 50px;
+}
+
+.top-space {
+    margin-top: 50px;
+}
+
+
+
+.next-6-d .row {
+    padding: 10px;
+    text-align: center;
+    border-radius: 7px;
+    background-color: #1d46a0;
+    margin-bottom: 20px;    
+}
+
+.next-6-d .row > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.high-low {
+    display: none !important;
+}
+@media (max-width: 1400px) {
+    .crnt-deg {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .crnt-deg {
+        font-size: 70px;
+    }
+    .crnt-deg + p {
+        font-size: 15px;
+    }
+    .current-stats .row {
+        align-items: first baseline;
+    }
+
+    .current-text {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 800px) {
+    .crnt-deg {
+        font-size: 60px;
+    }
+    .crnt-deg + p {
+        font-size: 13px;
+    }
+    .current-text {
+        font-size: 15px;
+    }
+    .crnt-icon {
+        margin-left: 10px;
+    }
+    .crnt-temp > div {
+        margin-right: 20px;
+    }
+    .current-stats {
+        margin-left: 10px;
+    }
+    .current-stats .row:nth-last-child(1) {
+        margin-top: 27px;
+    }
+    .my-swiper,
+    .top-space {
+        margin-top: 45px;
+    }
+    .my-swiper span:nth-child(1) {
+        font-size: 18px;
+    }
+    .swiper-slide span {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 640px) {
+    .crnt-all {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .crnt-all::before {
+        display: none;
+    }
+    .crnt-temp {
+        border-bottom: solid 1px white;
+        padding-bottom: 20px;
+    }
+    .current-stats {
+        border-bottom: solid 1px white;
+        padding: 20px 20px;
+    }
+    .crnt-deg {
+        font-size: 18vw;
+    }
+    .crnt-deg + p {
+        font-size: 3.3vw;
+    }
+    .swiper {
+        display: none;
+    }
+    .next-6-d {
+        display: grid;
+        grid-template-columns: repeat(auto-fill ,minmax(80px ,1fr));
+        gap: 10px;
+    }
+    .container {
+        width: 95%;
+    }
+    .next-6-d .row {
+        flex: 1;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        padding-bottom: 30px;
+    }
+    .high-low   {
+        display: flex!important;
+        flex-direction: row !important;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+    
+    .hide {
+        display: none !important;
+    }
+}
+
+@media (max-width:558px) {
+    .next-6-d  {
+        grid-template-columns: repeat(3, minmax(100px ,1fr));
+        gap: 5px;
+    }
+}
